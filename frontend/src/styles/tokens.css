@@ -1,0 +1,100 @@
+:root {
+  /* -- Palette: "Careers Ledger" — a dossier / index-card system --
+     Paper + ink base, pine green for the employee track, deep indigo
+     for the employer track, muted amber as the shared accent. */
+  --ink: #171a14;
+  --ink-soft: #4a4f43;
+  --paper: #f4f2ea;
+  --paper-raised: #fbfaf4;
+  --paper-sunken: #ebe7da;
+  --line: #d9d3c1;
+  --line-strong: #b9b19a;
+
+  --pine: #1f3a2e;
+  --pine-soft: #e4ece5;
+  --pine-tint: #2f5a44;
+
+  --indigo: #232a4d;
+  --indigo-soft: #e4e6f0;
+  --indigo-tint: #37417a;
+
+  --amber: #b9791f;
+  --amber-soft: #f4e6c8;
+  --amber-strong: #8a5a12;
+
+  --danger: #9a3324;
+  --danger-soft: #f6e2dc;
+  --success: #1f5c3d;
+
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 14px;
+
+  --shadow-card: 0 1px 2px rgba(23, 26, 20, 0.06), 0 6px 20px -8px rgba(23, 26, 20, 0.18);
+  --shadow-pop: 0 12px 32px -12px rgba(23, 26, 20, 0.32);
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(31, 58, 46, 0.05), transparent 60%),
+    radial-gradient(1000px 700px at 100% 0%, rgba(35, 42, 77, 0.05), transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4em;
+  color: var(--ink);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber-strong);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,130 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  padding: 20px 0 56px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--pine);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  line-height: 1.06;
+  margin-bottom: 18px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--pine);
+}
+
+.hero p.lead {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin-bottom: 26px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-panel {
+  position: relative;
+  background: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow-pop);
+  color: var(--paper-raised);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(160deg, rgba(244, 242, 234, 0.25), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.hero-panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(244, 242, 234, 0.14);
+  font-size: 0.88rem;
+}
+
+.hero-panel-row:last-child {
+  border-bottom: none;
+}
+
+.hero-panel-label {
+  color: rgba(244, 242, 234, 0.6);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-panel-id {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(244, 242, 234, 0.5);
+  margin-bottom: 12px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.feature-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--paper-raised);
+}
+
+.feature-card .num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--amber-strong);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.feature-card p {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (max-width: 780px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

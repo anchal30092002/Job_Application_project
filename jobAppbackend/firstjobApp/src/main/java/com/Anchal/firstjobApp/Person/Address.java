@@ -1,0 +1,75 @@
+package com.Anchal.firstjobApp.Person;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable // ye primary key nhi hai fir bhi embeddable use kiye hai kyuki hibernate/jvm ko nhi pata h mi iss feild ko same person table me hi store krna hai ya ek alg table me bna kr store krna h
+//to embeddable lagane se usko ye pata chlta h ki person table me hi store krna hai . agar hm chahte h ki ek alg table bne to uske liye @entity ka use krna hota.
+public class Address {
+
+    private int houseno;
+    private String street;
+    private String city;
+    private String State;
+    private String country;
+    private Long pincode;
+
+    public Address(String street, int houseno, String city, String state, String country, Long pincode) {
+        this.street = street;
+        this.houseno = houseno;
+        this.city = city;
+        State = state;
+        this.country = country;
+        this.pincode = pincode;
+    }
+
+    public Address() {
+    }
+
+    public int getHouseNO() {
+        return houseno;
+    }
+
+    public void setHouseNO(int houseno) {
+        this.houseno = houseno;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return State;
+    }
+
+    public void setState(String state) {
+        State = state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public Long getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(Long pincode) {
+        this.pincode = pincode;
+    }
+}
