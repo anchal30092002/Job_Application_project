@@ -2,8 +2,7 @@ package com.Anchal.firstjobApp.Person;
 
 import jakarta.persistence.Embeddable;
 
-@Embeddable // ye primary key nhi hai fir bhi embeddable use kiye hai kyuki hibernate/jvm ko nhi pata h mi iss feild ko same person table me hi store krna hai ya ek alg table me bna kr store krna h
-//to embeddable lagane se usko ye pata chlta h ki person table me hi store krna hai . agar hm chahte h ki ek alg table bne to uske liye @entity ka use krna hota.
+@Embeddable 
 public class Address {
 
     private int houseno;
