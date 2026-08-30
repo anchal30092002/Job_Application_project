@@ -17,7 +17,7 @@ public class Address {
         this.street = street;
         this.houseno = houseno;
         this.city = city;
-        State = state;
+        this.State = state;
         this.country = country;
         this.pincode = pincode;
     }
@@ -54,7 +54,7 @@ public class Address {
     }
 
     public void setState(String state) {
-        State = state;
+        this.State = state;
     }
 
     public String getCountry() {
